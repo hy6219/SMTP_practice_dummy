@@ -27,10 +27,16 @@ a) MailAuth 클래스: 계정 인증
 
 b) MailSend 클래스: MailAuth를 이용하여 계정 확인 후 인증번호 생성, 메시지로 보내기
   i. javax.mail.Authenticator : MailAuth 객체를 통한 비밀번호 일치 확인(불일치시 javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at 535 5.7.8 https://support.google.com/mail/?p=BadCredentials x6sm3253404pfd.173 - gsmtp 에러가 뜰 수 있다!)
- ii. javax.mail.Message  : 수신자 설정을 위함
+
+
+ii. javax.mail.Message  : 수신자 설정을 위함
+
 iii. javax.mail.Session    : 메일을 보낼 때 세션을 이용하여 정보가 공유될 수 있도록 하여 scope로 인한 정보손실을 막기 위해 사용
+
 iv. javax.mail.Transport : 메일을 보내기 위하여 사용(send(메시지객체))
+
 v. javax.mail.internet.InternetAddress : 메일 주소를 명시하기 위하여 사용
+
 vi.javax.mail.internet.MimeMessage   : 세션을 통해서 메시지를 위한 객체
 
 - 결과물
